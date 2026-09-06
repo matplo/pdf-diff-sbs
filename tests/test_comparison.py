@@ -7,7 +7,7 @@ import sys
 import pymupdf as fitz
 import pytest
 
-from pdf_diff_sbs import compare, scan
+from pdf_diff_sbs import __version__, compare, scan
 
 
 def make_pdf(path, pages):
@@ -114,7 +114,7 @@ def test_cli_bad_input_and_version(tmp_path):
     result = run_cli(tmp_path, "missing.pdf", "also-missing.pdf")
     assert result.returncode != 0 and "Traceback" not in result.stderr
     result = run_cli(tmp_path, "--version")
-    assert result.returncode == 0 and "0.1.0" in result.stdout
+    assert result.returncode == 0 and __version__ in result.stdout
     result = run_cli(tmp_path, "--list", "--directory", tmp_path / "missing")
     assert result.returncode == 1 and "Not a directory" in result.stderr
 

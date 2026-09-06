@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pdf-diff-sbs"
-version = "0.1.0"
+version = "0.1.1"
 description = "Searchable side-by-side PDF comparisons with word-level highlights"
 readme = "README.md"
 requires-python = ">=3.10"

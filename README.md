@@ -14,8 +14,7 @@ source .venv/bin/activate
 python -m pip install "git+https://github.com/matplo/pdf-diff-sbs.git"
 ```
 
-On Windows, activate with `.venv\Scripts\activate` instead. For a private repository,
-Git needs GitHub credentials with access to the repository.
+On Windows, activate with `.venv\Scripts\activate` instead.
 
 Install a specific version with:
 
@@ -25,6 +24,7 @@ python -m pip install "git+https://github.com/matplo/pdf-diff-sbs.git@v0.1.0"
 
 PyMuPDF is installed automatically. No Poppler installation is required. The package
 is prepared for future PyPI distribution; it has not been published to PyPI.
+Once the first PyPI release is published, install it with `python -m pip install pdf-diff-sbs`.
 
 ## Usage
 
@@ -86,3 +86,9 @@ python -m twine check dist/*
 
 Tests generate small synthetic PDFs in temporary directories. The repository contains
 the package and tests; input documents and generated comparison PDFs are excluded.
+
+## Releases
+
+See [RELEASING.md](RELEASING.md) for the PyPI Trusted Publisher configuration and
+tag-triggered release steps. A manual run of the publishing workflow validates the
+release build without uploading to PyPI.
