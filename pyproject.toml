@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-diff-sbs"
+version = "0.1.0"
+description = "Searchable side-by-side PDF comparisons with word-level highlights"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "matplo"}]
+dependencies = ["PyMuPDF>=1.28.2,<2"]
+keywords = ["pdf", "diff", "side-by-side", "comparison"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Text Processing",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "build>=1.2", "twine>=6"]
+
+[project.scripts]
+pdf-diff-sbs = "pdf_diff_sbs.cli:main"
+
+[project.urls]
+Repository = "https://github.com/matplo/pdf-diff-sbs"
+Issues = "https://github.com/matplo/pdf-diff-sbs/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
