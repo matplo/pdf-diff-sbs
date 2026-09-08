@@ -4,27 +4,33 @@ Compare two PDFs and generate a searchable **side-by-side** (SBS) PDF, with remo
 words highlighted in red and added words highlighted in green. Original pages retain
 their vector content and selectable text.
 
-## Install from GitHub
+## Install
 
-Requires Python 3.10+ and Git. Use a virtual environment:
+Requires Python 3.10+. Use a virtual environment:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install "git+https://github.com/matplo/pdf-diff-sbs.git"
+python -m pip install pdf-diff-sbs
 ```
 
 On Windows, activate with `.venv\Scripts\activate` instead.
 
-Install a specific version with:
+Install a specific PyPI version with:
 
 ```bash
-python -m pip install "git+https://github.com/matplo/pdf-diff-sbs.git@v0.1.0"
+python -m pip install "pdf-diff-sbs==0.1.1"
 ```
 
-PyMuPDF is installed automatically. No Poppler installation is required. The package
-is prepared for future PyPI distribution; it has not been published to PyPI.
-Once the first PyPI release is published, install it with `python -m pip install pdf-diff-sbs`.
+PyMuPDF is installed automatically. No Poppler installation is required.
+
+For the latest development version, install from GitHub (requires Git):
+
+```bash
+python -m pip install "git+https://github.com/matplo/pdf-diff-sbs.git"
+```
+
+To select a GitHub release, append its tag, for example `.git@v0.1.1`.
 
 ## Usage
 
